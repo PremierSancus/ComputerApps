@@ -41,7 +41,7 @@ void setup() {
   rect(width*56/240,height*24/240,width*80/240,height*25/240);//scoreboard for player X
   rect(width*152/240,height*24/240,width*80/240,height*25/240);//scoreboard for player O
   rect(width*81/240,height*27/240,width*40/240,height*19/240);//score for x
-  rect(width*139/240,height*27/240,width*40/240,height*19/240);//score for O
+  rect(width*174/240,height*27/240,width*40/240,height*19/240);//score for O
   
 }
 void draw() {}
