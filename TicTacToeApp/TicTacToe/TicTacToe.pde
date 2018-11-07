@@ -1,7 +1,8 @@
-color regularButton = #FFFFFF,hoverOverButton = #FF0A2B,whiteButton = #EAEAEA;
+color regularButton = #FFFFFF,hoverOverButton = #FF0A2B,whiteButton = #BFBFBF;
 String quit= "Quit",playerOne = "Player 1",playerTwo = "Player 2",restart = "Restart",screenshot = "Screenshot";
 String easy = "EASY",hard = "HARD",impossible = "IMPOSSIBLE",moves = "MOVES",x = "X",o = "O";
 PFont arial,algerian;
+PImage opic,xpic;
 
 void setup() {
   size(1200, 900); //To Illustrate use of Display Geometry
@@ -13,6 +14,8 @@ void setup() {
   background(255);
   
   GUI();
+  opic = loadImage("O.png"); //Dimensions: 259 Width, 194 Height
+  xpic = loadImage("X.png"); //Dimensions: 860 Width, 529 Height
 }
 
 void draw() {

@@ -88,7 +88,7 @@
     rect(width*192/240,height*96/240,width*48/240,height*48/240);//box 9
   }
   
-   if (mouseX>width*96/240 && mouseX<width*144 && mouseY>height*144/240 && mouseY<height*192/240){
+   if (mouseX>width*96/240 && mouseX<width*144/240 && mouseY>height*144/240 && mouseY<height*192/240){
     fill(whiteButton);
     rect(width*96/240,height*144/240,width*48/240,height*48/240);//box 4
   } else {
@@ -96,7 +96,7 @@
     rect(width*96/240,height*144/240,width*48/240,height*48/240);//box 4
   }
   
-   if (mouseX>width*144/240 && mouseX<width*192 && mouseY>height*144/240 && mouseY<height*192/240){
+   if (mouseX>width*144/240 && mouseX<width*192/240 && mouseY>height*144/240 && mouseY<height*192/240){
    fill(whiteButton);
    rect(width*144/240,height*144/240,width*48/240,height*48/240);//box 5
   } else {
@@ -112,7 +112,7 @@
     rect(width*192/240,height*144/240,width*48/240,height*48/240);//box 6
   }
   
-   if (mouseX>width*96/240 && mouseX<width*144 && mouseY>height*192/240 && mouseY<height){
+   if (mouseX>width*96/240 && mouseX<width*144/240 && mouseY>height*192/240 && mouseY<height){
     fill(whiteButton);
     rect(width*96/240,height*192/240,width*48/240,height*48/240);//box 1
   } else {
@@ -120,7 +120,7 @@
     rect(width*96/240,height*192/240,width*48/240,height*48/240);//box 1
   }
   
-   if (mouseX>width*144/240 && mouseX<width*192 && mouseY>height*192/240 && mouseY<height){
+   if (mouseX>width*144/240 && mouseX<width*192/240 && mouseY>height*192/240 && mouseY<height){
    fill(whiteButton);
    rect(width*144/240,height*192/240,width*48/240,height*48/240);//box 2
   } else {
