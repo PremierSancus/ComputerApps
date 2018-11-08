@@ -157,4 +157,11 @@
   textAlign (LEFT,CENTER);
   text(x,width*66/240,height*24/240,width*80/240,height*25/240);
   text(o,width*158/240,height*24/240,width*80/240,height*25/240);
+
+  if (turn%2 == 0) {
+   xo(o, position);
+  } else {
+   xo(x, position);
   }
+  
+}

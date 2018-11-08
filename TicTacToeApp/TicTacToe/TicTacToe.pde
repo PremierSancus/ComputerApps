@@ -1,7 +1,9 @@
 color regularButton = #FFFFFF,hoverOverButton = #FF0A2B,whiteButton = #BFBFBF;
 String quit= "Quit",playerOne = "Player 1",playerTwo = "Player 2",restart = "Restart",screenshot = "Screenshot";
 String easy = "EASY",hard = "HARD",impossible = "IMPOSSIBLE",moves = "MOVES",x = "X",o = "O";
-PFont arial,algerian;
+Boolean[] noDraw = new Boolean[9]; //Turn off ablity to draw an X or an O in a sqaure of the board
+int xScore = 0, oScore = 0, turn = 0, position;
+PFont arial,algerian,castellar;
 PImage opic,xpic;
 
 void setup() {
@@ -11,11 +13,13 @@ void setup() {
   println("Starting of Console"); // If you cannot see this, the find another way to see the list on the program
   arial = createFont ("Arial", 55); //Must also Tools / Create Font / Find Font / Do Not Press "OK"
   algerian = createFont ("Algerian",55);
+  castellar = createFont ("Castellar",55);
   background(255);
   
   GUI();
-  opic = loadImage("O.png"); //Dimensions: 259 Width, 194 Height
-  xpic = loadImage("X.png"); //Dimensions: 860 Width, 529 Height
+  for(int i=0; i < noDraw.length; i++) {
+    noDraw[i] = false;
+  }
 }
 
 void draw() {
@@ -26,4 +30,5 @@ void draw() {
 //Listener
 void mouseClicked () {
   thingsInMouseClicked();
+  xoDraw();
 } //End mouseClicked
