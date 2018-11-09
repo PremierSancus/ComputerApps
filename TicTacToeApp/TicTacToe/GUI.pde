@@ -11,9 +11,8 @@
   rect(width*4/240,height*102/240,width*40/240,height*60/240);//Hard button
   rect(width*4/240,height*174/240,width*40/240,height*60/240);//Impossible button
   
- 
-  rect(width*56/240,height*101/240,width*36/240,height*139/240);//records moves of current game rectangle
-  rect(width*56/240,height*96/240,width*36/240,height*15/240);//Just a place to put the name Moves
+  rect(width*56/240,height*81/240,width*36/240,height*20/240); //text place for string moves
+  rect(width*56/240,height*101/240,width*36/240,height*139/240);//records moves of current game
   
   rect(width*96/240,height*96/240,width*240/240,height*240/240);//where the actual game goes rectangle
 
