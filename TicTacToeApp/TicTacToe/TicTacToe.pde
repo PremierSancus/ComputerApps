@@ -8,7 +8,7 @@ PFont arial,algerian,castellar;
 PImage opic,xpic;
 
 void setup() {
-  size(1200, 500); //To Illustrate use of Display Geometry
+  size(1200, 900); //To Illustrate use of Display Geometry
   //fullScreen(); //uses displayWidth and displayHeight
   println("Screen Width:", displayWidth, "\tHeight:", displayHeight);
   println("Starting of Console"); // If you cannot see this, the find another way to see the list on the program
