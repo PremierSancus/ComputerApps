@@ -6,6 +6,7 @@ Boolean[] noDraw = new Boolean[9]; //Turn off ablity to draw an X or an O in a s
 int xScore = 0, oScore = 0, turn = 1, position, xOne,yOne,xTwo,yTwo;
 PFont arial,algerian,castellar;
 PImage opic,xpic;
+float geometry;
 
 void setup() {
   size(1200, 900); //To Illustrate use of Display Geometry
@@ -22,6 +23,7 @@ void setup() {
   for(int i=0; i < noDraw.length; i++) {
     noDraw[i] = false;
   }
+
 }
 
 void draw() {

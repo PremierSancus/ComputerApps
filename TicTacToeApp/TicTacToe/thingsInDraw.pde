@@ -147,17 +147,14 @@
   text(screenshot,width*4/240,height*2/240,width*40/240,height*18/240);
   text(moves, width*56/240,height*81/240,width*36/240,height*20/240);
   textFont(algerian, 55);
-  text(easy,width*4/240,height*30/240,width*40/240,height*60/240);
-  text(hard,width*4/240,height*102/240,width*40/240,height*60/240);
   textFont(algerian,33);
   text(impossible,width*4/240,height*174/240,width*40/240,height*60/240);
-  textFont(arial,33);
-  textAlign (LEFT,CENTER);
-  text(x,width*66/240,height*24/240,width*80/240,height*25/240);
-  text(o,width*158/240,height*24/240,width*80/240,height*25/240);
-  textAlign(CENTER,CENTER);
-  text(str(xScore), width*81/240,height*27/240,width*40/240,height*19/240);
-  text(str(oScore), width*174/240,height*27/240,width*40/240,height*19/240);
+  textDraw("Easy", algerian, height, CENTER, CENTER,width*4/240,height*30/240,width*40/240,height*60/240);
+  textDraw("Hard", algerian, height, CENTER, CENTER,width*4/240,height*102/240,width*40/240,height*60/240);
+  textDraw(x, arial, height, LEFT, CENTER,width*66/240,height*24/240,width*80/240,height*25/240);
+  textDraw(o, arial, height, LEFT, CENTER,width*158/240,height*24/240,width*80/240,height*25/240);
+  textDraw(str(xScore), arial, height, CENTER, CENTER, width*81/240,height*27/240,width*40/240,height*19/240);
+  textDraw(str(oScore), arial, height, CENTER, CENTER, width*174/240,height*27/240,width*40/240,height*19/240);
   if (turn%2 == 0) {
    xo(o, position);
   } else {

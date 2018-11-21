@@ -1,6 +1,6 @@
 void thingsInMouseClicked(){
   if (mouseX>width*196/240 && mouseX<width*236/240 && mouseY>0 && mouseY<height*20/240) {
-    exit();
+    exit();//quit
   }
   //box 7 moves
   if (mouseX>width*96/240 && mouseX<width*144/240 && mouseY>height*96/240 && mouseY<height*144/240){
