@@ -6,7 +6,19 @@ void textDraw(String string, PFont font, float height, int alignHorizontal, int 
   println( string.length() );
   if (string.length() >= 13) {
     fontSize = textCalculator(height, string, rectWidth);
-  } else {
+  }if(string.length() == restart.length()){
+    fontSize = fontSize * 0.6;
+  }if (string.length() == impossible.length()){
+    fontSize = fontSize * 0.4;
+  }if (string.length() == moves.length()){
+    fontSize = fontSize * 0.5;
+  }if(string.length() == playerOne.length()){
+     fontSize = fontSize * 0.6; 
+  }if (string.length() == quit.length()) {
+     fontSize =fontSize * 0.7;
+  }if(string.length() == 1){
+     fontSize = fontSize * 0.05;
+  }else {
     //Catch for string less than 13 characters
     fontSize = fontSize * 0.08; //Change number as needed
   }

@@ -136,21 +136,15 @@
     rect(width*192/240,height*192/240,width*48/240,height*48/240);//box 3
   }
   
-  fill(#FFDA03); //Yellow Ink, copied from Color Selector
-  textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
-  //Values: LEFT | CENTER | RIGHT & TOP | CENTER | BOTTOM | BASELINE
-  textFont(arial, 35); //Change the number until it fits, largest font size
-  text(quit,width*196/240,height*2/240,width*40/240,height*18/240);
-  text(playerOne,width*52/240,height*2/240,width*40/240,height*18/240);
-  text(playerTwo,width*148/240,height*2/240,width*40/240,height*18/240);
-  text(restart,width*100/240,height*2/240,width*40/240,height*18/240);
-  text(screenshot,width*4/240,height*2/240,width*40/240,height*18/240);
-  text(moves, width*56/240,height*81/240,width*36/240,height*20/240);
-  textFont(algerian, 55);
-  textFont(algerian,33);
-  text(impossible,width*4/240,height*174/240,width*40/240,height*60/240);
-  textDraw("Easy", algerian, height, CENTER, CENTER,width*4/240,height*30/240,width*40/240,height*60/240);
-  textDraw("Hard", algerian, height, CENTER, CENTER,width*4/240,height*102/240,width*40/240,height*60/240);
+  textDraw(playerOne,arial,height, CENTER,CENTER,width*52/240,height*2/240,width*40/240,height*18/240);
+  textDraw(moves, arial,height,CENTER,CENTER,width*56/240,height*81/240,width*36/240,height*20/240);
+  textDraw(playerTwo,arial,height,CENTER,CENTER,width*148/240,height*2/240,width*40/240,height*18/240);
+  textDraw(restart,arial,height,CENTER,CENTER,width*100/240,height*2/240,width*40/240,height*18/240);
+  textDraw(screenshot,arial, height, CENTER,CENTER,width*4/240,height*2/240,width*40/240,height*18/240);
+  textDraw(quit, arial, height, CENTER, CENTER,width*196/240,height*2/240,width*40/240,height*18/240);
+  textDraw(easy, algerian, height, CENTER, CENTER,width*4/240,height*30/240,width*40/240,height*60/240);
+  textDraw(hard, algerian, height, CENTER, CENTER,width*4/240,height*102/240,width*40/240,height*60/240);
+  textDraw(impossible, algerian, height, CENTER,CENTER,width*4/240,height*174/240,width*40/240,height*60/240);
   textDraw(x, arial, height, LEFT, CENTER,width*66/240,height*24/240,width*80/240,height*25/240);
   textDraw(o, arial, height, LEFT, CENTER,width*158/240,height*24/240,width*80/240,height*25/240);
   textDraw(str(xScore), arial, height, CENTER, CENTER, width*81/240,height*27/240,width*40/240,height*19/240);
