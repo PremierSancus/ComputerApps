@@ -63,79 +63,7 @@
     fill(regularButton);
     rect(width*4/240,height*174/240,width*40/240,height*60/240);//Impossible button
   }
-  
-   if (mouseX>width*96/240 && mouseX<width*144/240 && mouseY>height*96/240 && mouseY<height*144/240){
-    fill(whiteButton);
-     rect(width*96/240,height*96/240,width*48/240,height*48/240);//box 7
-  } else {
-    fill(regularButton);
-    rect(width*96/240,height*96/240,width*48/240,height*48/240);//box 7
-  }
-  
-   if (mouseX>width*144/240 && mouseX<width*192/240 && mouseY>height*96/240 && mouseY<height*144/240){
-    fill(whiteButton);
-    rect(width*144/240,height*96/240,width*48/240,height*48/240);//box 8
-  } else {
-    fill(regularButton);
-    rect(width*144/240,height*96/240,width*48/240,height*48/240);//box 8
-  }
-  
-   if (mouseX>width*192/240 && mouseX<width && mouseY>height*96/240 && mouseY<height*144/240){
-    fill(whiteButton);
-    rect(width*192/240,height*96/240,width*48/240,height*48/240);//box 9
-  } else {
-    fill(regularButton);
-    rect(width*192/240,height*96/240,width*48/240,height*48/240);//box 9
-  }
-  
-   if (mouseX>width*96/240 && mouseX<width*144/240 && mouseY>height*144/240 && mouseY<height*192/240){
-    fill(whiteButton);
-    rect(width*96/240,height*144/240,width*48/240,height*48/240);//box 4
-  } else {
-    fill(regularButton);
-    rect(width*96/240,height*144/240,width*48/240,height*48/240);//box 4
-  }
-  
-   if (mouseX>width*144/240 && mouseX<width*192/240 && mouseY>height*144/240 && mouseY<height*192/240){
-   fill(whiteButton);
-   rect(width*144/240,height*144/240,width*48/240,height*48/240);//box 5
-  } else {
-   fill(regularButton);
-   rect(width*144/240,height*144/240,width*48/240,height*48/240);//box 5
-  }
-  
-   if (mouseX>width*192/240 && mouseX<width && mouseY>height*144/240 && mouseY<height*192/240){
-   fill(whiteButton);
-   rect(width*192/240,height*144/240,width*48/240,height*48/240);//box 6
-  } else {
-    fill(regularButton);
-    rect(width*192/240,height*144/240,width*48/240,height*48/240);//box 6
-  }
-  
-   if (mouseX>width*96/240 && mouseX<width*144/240 && mouseY>height*192/240 && mouseY<height){
-    fill(whiteButton);
-    rect(width*96/240,height*192/240,width*48/240,height*48/240);//box 1
-  } else {
-    fill(regularButton);
-    rect(width*96/240,height*192/240,width*48/240,height*48/240);//box 1
-  }
-  
-   if (mouseX>width*144/240 && mouseX<width*192/240 && mouseY>height*192/240 && mouseY<height){
-   fill(whiteButton);
-   rect(width*144/240,height*192/240,width*48/240,height*48/240);//box 2
-  } else {
-    fill(regularButton);
-    rect(width*144/240,height*192/240,width*48/240,height*48/240);//box 2
-  } 
-  
-   if (mouseX>width*192/240 && mouseX<width && mouseY>height*192/240 && mouseY<height){
-   fill(whiteButton);
-   rect(width*192/240,height*192/240,width*48/240,height*48/240);//box 3
-  } else {
-    fill(regularButton);
-    rect(width*192/240,height*192/240,width*48/240,height*48/240);//box 3
-  }
-  
+
   textDraw(playerOne,arial,height, CENTER,CENTER,width*52/240,height*2/240,width*40/240,height*18/240);
   textDraw(moves, arial,height,CENTER,CENTER,width*56/240,height*81/240,width*36/240,height*20/240);
   textDraw(playerTwo,arial,height,CENTER,CENTER,width*148/240,height*2/240,width*40/240,height*18/240);
@@ -150,8 +78,14 @@
   textDraw(str(xScore), arial, height, CENTER, CENTER, width*81/240,height*27/240,width*40/240,height*19/240);
   textDraw(str(oScore), arial, height, CENTER, CENTER, width*174/240,height*27/240,width*40/240,height*19/240);
   if (turn%2 == 0) {
-   xo(o, position);
-  } else {
    xo(x, position);
+  } else {
+   xo(o, position);
+  }
+  if(winX == true){
+    rect(width*96/240,height*96/240,width*144/240,height*144/240);//box over boxes
+  }
+  if(winO == true){
+    rect(width*96/240,height*96/240,width*144/240,height*144/240);//box over boxes
   }
 }
