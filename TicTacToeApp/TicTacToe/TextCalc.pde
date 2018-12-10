@@ -3,7 +3,6 @@ void textDraw(String string, PFont font, float height, int alignHorizontal, int 
   fill(yellow);
   textAlign (alignHorizontal, alignVertical);
   
-  println( string.length() );
   if (string.length() >= 13) {
     fontSize = textCalculator(height, string, rectWidth);
   }if(string.length() == restart.length()){

@@ -1,5 +1,5 @@
   void thingsInDraw(){
-  println ("Mousex:", mouseX, "\tMouseY:", mouseY);
+  //println ("Mousex:", mouseX, "\tMouseY:", mouseY);
   if (mouseX>width*196/240 && mouseX<width && mouseY>0 && mouseY<height*20/240) { //Hover Over
     fill(hoverOverButton);
     rect(width*196/240,height*2/240,width*40/240,height*18/240);
