@@ -9,8 +9,7 @@ void gamePieces() {
   boardPiece[7] = null; //Third Middle //"O"
   boardPiece[8] = null; //Third Corner, right
 
-  onlyX();
-  onlyO();
+  
 }
 
 void onlyX() {
