@@ -4,13 +4,13 @@ void moves(int xOne,int yOne,int xTwo,int yTwo){
   boardPiece[(position-1)] = "X";
   onlyX();
   println(onlyXPiece[0], boardPiece[0]);
-  println(onlyXPiece[1], boardPiece[1], trigger[1]);
+  println(onlyXPiece[1], boardPiece[1], trigger[0]);
   println(onlyXPiece[2], boardPiece[2]);
   println(onlyXPiece[3], boardPiece[3], trigger[1]);
-  println(onlyXPiece[4], boardPiece[4], trigger[1]);
-  println(onlyXPiece[5], boardPiece[5], trigger[1]);
+  println(onlyXPiece[4], boardPiece[4], trigger[2]);
+  println(onlyXPiece[5], boardPiece[5], trigger[3]);
   println(onlyXPiece[6], boardPiece[6]);
-  println(onlyXPiece[7], boardPiece[7], trigger[1]);
+  println(onlyXPiece[7], boardPiece[7], trigger[4]);
   println(onlyXPiece[8], boardPiece[8]);
   println("END of XPIECE");
   }
