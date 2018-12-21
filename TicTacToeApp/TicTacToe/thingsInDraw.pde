@@ -63,7 +63,6 @@
     fill(regularButton);
     rect(width*4/240,height*174/240,width*40/240,height*60/240);//Impossible button
   }
-
   textDraw(playerOne,arial,height, CENTER,CENTER,width*52/240,height*2/240,width*40/240,height*18/240);
   textDraw(moves, arial,height,CENTER,CENTER,width*56/240,height*81/240,width*36/240,height*20/240);
   textDraw(playerTwo,arial,height,CENTER,CENTER,width*148/240,height*2/240,width*40/240,height*18/240);
@@ -83,9 +82,13 @@
    xo(o, position);
   }
   if(winX == true){
-    rect(width*96/240,height*96/240,width*144/240,height*144/240);//box over boxes
+    reset();
+    rect(width*81/240,height*27/240,width*40/240,height*19/240);//score for x
+    xScore++;
   }
   if(winO == true){
-    rect(width*96/240,height*96/240,width*144/240,height*144/240);//box over boxes
+    reset();  
+    rect(width*174/240,height*27/240,width*40/240,height*19/240);//score for O
+    oScore++;
   }
 }

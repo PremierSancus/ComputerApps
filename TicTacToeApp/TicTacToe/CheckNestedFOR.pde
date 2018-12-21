@@ -45,6 +45,9 @@ Boolean checkNestedFor(String string, String[] pieces) {
        } 
      }
    }
+   if(win == true){
+    XOrO = string; 
+   }
  }
 return win;
 }

@@ -1,7 +1,7 @@
 //globul barioballs
-color regularButton = #FFFFFF,hoverOverButton = #FF0A2B,whiteButton = #BFBFBF,yellow = #FFDA03;
+color regularButton = #FFFFFF,hoverOverButton = #FF0A2B,whiteButton = #BFBFBF,yellow = #FFDA03, white = #FFFFFF, black = #030000;
 String quit= "Quit",playerOne = "Player 1",playerTwo = "Player 2",restart = "Restart",screenshot = "Screenshot";
-String easy = "EASY",hard = "HARD",impossible = "IMPOSSIBLE",moves = "MOVES",x = "X",o = "O";
+String easy = "EASY",hard = "HARD",impossible = "IMPOSSIBLE",moves = "MOVES",x = "X",o = "O", XOrO;
 String[] movePositions = {"","Top Lft","Top Mid","Top Rgt","Mid Lft","Mid Mid","Mid Rgt","Bot Lft","Bot Mid","Bot Rgt"};
 Boolean[] noDraw = new Boolean[9]; //Turn off ablity to draw an X or an O in a sqaure of the boar
 Boolean check3InRowX = false, check3InRowO = false, winX = false, winO = false;

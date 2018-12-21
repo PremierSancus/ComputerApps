@@ -4,7 +4,7 @@ void thingsInMouseClicked(){
   }
   //box 7 moves
   if (mouseX>width*96/240 && mouseX<width*144/240 && mouseY>height*96/240 && mouseY<height*144/240){
-    if(turn == 2){ moves(width*56/240,height*101/240,width*36/240,height*139/2160); }
+    if(turn == 2){moves(width*56/240,height*101/240,width*36/240,height*139/2160);}
     if(turn == 3){ moves(width*56/240,height*1048/2160,width*36/240,height*139/2160);}
     if(turn == 4){ moves(width*56/240,height*1187/2160,width*36/240,height*139/2160);}
     if(turn == 5){ moves(width*56/240,height*1326/2160,width*36/240,height*139/2160);}
@@ -16,7 +16,7 @@ void thingsInMouseClicked(){
   }
   //box 8 moves
   if (mouseX>width*144/240 && mouseX<width*192/240 && mouseY>height*96/240 && mouseY<height*144/240){
-    if(turn == 2){ moves(width*56/240,height*101/240,width*36/240,height*139/2160);}
+    if(turn == 2){moves(width*56/240,height*101/240,width*36/240,height*139/2160);}
     if(turn == 3){ moves(width*56/240,height*1048/2160,width*36/240,height*139/2160);}
     if(turn == 4){ moves(width*56/240,height*1187/2160,width*36/240,height*139/2160);}
     if(turn == 5){ moves(width*56/240,height*1326/2160,width*36/240,height*139/2160);}
