@@ -1,0 +1,8 @@
+{
+    "id": 5946768,
+    "name": "Edmonton",
+    "country": "CA",
+    "coord": {
+      "lon": -113.468712,
+      "lat": 53.55014
+    }

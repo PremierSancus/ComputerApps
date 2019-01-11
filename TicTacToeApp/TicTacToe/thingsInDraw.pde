@@ -82,13 +82,13 @@
    xo(o, position);
   }
   if(winX == true){
-    reset();
     rect(width*81/240,height*27/240,width*40/240,height*19/240);//score for x
-    xScore++;
+    xScore = xScore +1;
+    ContinueButton();
   }
   if(winO == true){
-    reset();  
     rect(width*174/240,height*27/240,width*40/240,height*19/240);//score for O
-    oScore++;
+    oScore = oScore +1;
+    ContinueButton();
   }
 }

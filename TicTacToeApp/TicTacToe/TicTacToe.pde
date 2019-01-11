@@ -3,8 +3,9 @@ color regularButton = #FFFFFF,hoverOverButton = #FF0A2B,whiteButton = #BFBFBF,ye
 String quit= "Quit",playerOne = "Player 1",playerTwo = "Player 2",restart = "Restart",screenshot = "Screenshot";
 String easy = "EASY",hard = "HARD",impossible = "IMPOSSIBLE",moves = "MOVES",x = "X",o = "O", XOrO;
 String[] movePositions = {"","Top Lft","Top Mid","Top Rgt","Mid Lft","Mid Mid","Mid Rgt","Bot Lft","Bot Mid","Bot Rgt"};
+String[] movePositionCounter = {"1.","2.","3.","4.","5.","6.","7.","8.","9."};
 Boolean[] noDraw = new Boolean[9]; //Turn off ablity to draw an X or an O in a sqaure of the boar
-Boolean check3InRowX = false, check3InRowO = false, winX = false, winO = false;
+Boolean check3InRowX = false, check3InRowO = false, winX = false, winO = false, toContinue = false;
 int xScore = 0, oScore = 0, turn = 1, position, xOne,yOne,xTwo,yTwo,numberOfBoardPieces = 9,triggerPieces = 5;
 String[] trigger = new String[triggerPieces];
 String[] boardPiece = new String[numberOfBoardPieces];
@@ -34,6 +35,7 @@ void setup() {
 
 void draw() {
   thingsInDraw();
+
   
 }
 

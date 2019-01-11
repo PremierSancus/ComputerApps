@@ -10,6 +10,9 @@
   rect(width*4/240,height*30/240,width*40/240,height*60/240);//Easy button
   rect(width*4/240,height*102/240,width*40/240,height*60/240);//Hard button
   rect(width*4/240,height*174/240,width*40/240,height*60/240);//Impossible button
+  fill(yellow);
+  rect(width*96/240,height*55/240,width*144/240,height*30/240); //Something above the game box
+  fill(white);
   rect(width*96/240,height*96/240,width*48/240,height*48/240);//box 7
   rect(width*144/240,height*96/240,width*48/240,height*48/240);//box 8
   rect(width*192/240,height*96/240,width*48/240,height*48/240);//box 9

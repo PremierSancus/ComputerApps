@@ -1,6 +1,9 @@
 void moves(int xOne,int yOne,int xTwo,int yTwo){
+  int xOn = xOne + width*4/240;
+  textDraw(movePositionCounter[turn-2],arial,height,CENTER,CENTER,xOne,yOne,xOn,yTwo);
+  println(movePositionCounter[turn-2]);
   if(turn % 2 == 0){
-  textDraw(movePositions[position],arial,height,CENTER,CENTER,xOne,yOne,xTwo,yTwo);
+  textDraw(movePositions[position],arial,height,CENTER,CENTER,xOn,yOne,xTwo,yTwo);
   boardPiece[(position-1)] = "X";
   onlyX();
   trigger();
@@ -17,7 +20,7 @@ void moves(int xOne,int yOne,int xTwo,int yTwo){
   println("END of XPIECE");
   }
   else{
-  textDraw(movePositions[position],arial,height,CENTER,CENTER,xOne,yOne,xTwo,yTwo);
+  textDraw(movePositions[position],arial,height,CENTER,CENTER,xOn+12/240,yOne,xTwo,yTwo);
   boardPiece[position-1] = "O";
   onlyO();
   trigger();
