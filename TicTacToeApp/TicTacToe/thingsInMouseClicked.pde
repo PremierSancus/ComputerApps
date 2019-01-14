@@ -1,7 +1,4 @@
 void thingsInMouseClicked(){
-  if (mouseX>width*196/240 && mouseX<width*236/240 && mouseY>0 && mouseY<height*20/240) {
-    exit();//quit
-  }
   //box 7 moves
   if (mouseX>width*96/240 && mouseX<width*144/240 && mouseY>height*96/240 && mouseY<height*144/240){
     if(turn == 2){moves(width*56/240,height*101/240,width*36/240,height*139/2160);}
@@ -110,14 +107,5 @@ void thingsInMouseClicked(){
     if(turn == 9){ moves(width*56/240,height*1882/2160,width*36/240,height*139/2160); }
     if(turn == 10){ moves(width*56/240,height*2021/2160,width*36/240,height*139/2160); }
   }
-  if (toContinue == true){
-    if(mouseX>width*96/240 && mouseX<width && mouseY>height*55/240 && mouseY<height*85/240) {
-      ContinueButton();
-      resetThings();
-      toContinue = false;
-    }
-  }
-  if (mouseX>width*100/240 && mouseX<width*140/240 && mouseY>height*2/240 && mouseY<height*20/240){
-    reset();
-  }
+  
 }
