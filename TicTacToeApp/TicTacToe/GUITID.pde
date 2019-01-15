@@ -7,28 +7,45 @@ void GUITID(){
     rect(width*196/240,height*2/240,width*40/240,height*18/240);
   }
   //playwithAI stuff!!!
-  if (mouseX>width*148/240 && mouseX<width*188/240 && mouseY>height*2/240 && mouseY<height*20/240){
+  if(playWithAI == true){
+      fill(hoverOverButton);
+      rect(width*52/240,height*2/240,width*40/240,height*18/240);//player 1 button rectangle
+      if (mouseX>width*148/240 && mouseX<width*188/240 && mouseY>height*2/240 && mouseY<height*20/240){
+      fill(hoverOverButton);
+      rect(width*148/240,height*2/240,width*40/240,height*18/240); //player 2 button rectabgle
+    } else {
+      fill(regularButton);
+      rect(width*148/240,height*2/240,width*40/240,height*18/240); //player 2 button rectabgle
+    }
+    if(EasyAI == true){
     fill(hoverOverButton);
-    rect(width*148/240,height*2/240,width*40/240,height*18/240); //player 2 button rectabgle
-  } else {
-    fill(regularButton);
-    rect(width*148/240,height*2/240,width*40/240,height*18/240); //player 2 button rectabgle
-  }
-  
-  if (mouseX>width*100/240 && mouseX<width*140/240 && mouseY>height*2/240 && mouseY<height*20/240){
+    rect(width*4/240,height*30/240,width*40/240,height*60/240);//Easy button
+    }
+  if(HardAI == true){
+    fill(hoverOverButton);
+    rect(width*4/240,height*102/240,width*40/240,height*60/240);//Hard button
+     }
+  if(ImpossibleAI == true){
+    fill(hoverOverButton);
+    rect(width*4/240,height*174/240,width*40/240,height*60/240);//Impossible button
+     }
+   }
+  if(playWithAI == false){
+      fill(hoverOverButton);
+      rect(width*148/240,height*2/240,width*40/240,height*18/240); //player 2 button rectabgle
+      if (mouseX>width*52/240 && mouseX<width*92/240 && mouseY>height*2/240 && mouseY<height*20/240){
+        fill(hoverOverButton);
+        rect(width*52/240,height*2/240,width*40/240,height*18/240);//player 1 button rectangle
+      } else {
+        fill(regularButton);
+        rect(width*52/240,height*2/240,width*40/240,height*18/240);//player 1 button rectangle
+      }
+  }if (mouseX>width*100/240 && mouseX<width*140/240 && mouseY>height*2/240 && mouseY<height*20/240){
     fill(hoverOverButton);
     rect(width*100/240,height*2/240,width*40/240,height*18/240);//restart button rectangle
   } else {
     fill(regularButton);
     rect(width*100/240,height*2/240,width*40/240,height*18/240);//restart button rectangle
-  }
-  
-   if (mouseX>width*52/240 && mouseX<width*92/240 && mouseY>height*2/240 && mouseY<height*20/240){
-    fill(hoverOverButton);
-    rect(width*52/240,height*2/240,width*40/240,height*18/240);//player 1 button rectangle
-  } else {
-    fill(regularButton);
-    rect(width*52/240,height*2/240,width*40/240,height*18/240);//player 1 button rectangle
   }
   
    if (mouseX>width*4/240 && mouseX<width*44/240 && mouseY>height*2/240 && mouseY<height*20/240){
@@ -38,30 +55,30 @@ void GUITID(){
     fill(regularButton);
     rect(width*4/240,height*2/240,width*40/240,height*18/240);//screenshot button rectangle  
   }
-  
-  if (mouseX>width*4/240 && mouseX<width*44/240 && mouseY>height*30/240 && mouseY<height*90/240){
-    fill(hoverOverButton);
-    rect(width*4/240,height*30/240,width*40/240,height*60/240);//Easy button
-  } else {
-    fill(regularButton);
-    rect(width*4/240,height*30/240,width*40/240,height*60/240);//Easy button
-  }
-  
+  if(EasyAI == false){
+    if (mouseX>width*4/240 && mouseX<width*44/240 && mouseY>height*30/240 && mouseY<height*90/240){
+      fill(hoverOverButton);
+      rect(width*4/240,height*30/240,width*40/240,height*60/240);//Easy button
+    } else {
+      fill(regularButton);
+      rect(width*4/240,height*30/240,width*40/240,height*60/240);//Easy button
+    }
+  }if(HardAI == false){
    if (mouseX>width*4/240 && mouseX<width*44/240 && mouseY>height*102/240 && mouseY<height*162/240){
     fill(hoverOverButton);
     rect(width*4/240,height*102/240,width*40/240,height*60/240);//Hard button
   } else {
     fill(regularButton);
     rect(width*4/240,height*102/240,width*40/240,height*60/240);//Hard button
-  }
-  
+  }}
+   if(ImpossibleAI==false){
    if (mouseX>width*4/240 && mouseX<width*44/240 && mouseY>height*174/240 && mouseY<height*234/240){
     fill(hoverOverButton);
     rect(width*4/240,height*174/240,width*40/240,height*60/240);//Impossible button
   } else {
     fill(regularButton);
     rect(width*4/240,height*174/240,width*40/240,height*60/240);//Impossible button
-  }
+  }}
    if (mouseX>width*96/240 && mouseX<width*240/240 && mouseY>height*55/240 && mouseY<height*85/240){
     fill(hoverOverButton);
     rect(width*96/240,height*55/240,width*144/240,height*30/240);//continue Button

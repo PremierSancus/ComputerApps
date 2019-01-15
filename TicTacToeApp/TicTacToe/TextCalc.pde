@@ -1,4 +1,4 @@
-void textDraw(String string, PFont font, float height, int alignHorizontal, int alignVertical, float rectX, float rectY, float rectWidth, float rectHeight) {
+  void textDraw(String string, PFont font, float height, int alignHorizontal, int alignVertical, float rectX, float rectY, float rectWidth, float rectHeight) {
   float fontSize = height;
   fill(yellow);
   textAlign (alignHorizontal, alignVertical);

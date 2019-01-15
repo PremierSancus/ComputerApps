@@ -5,7 +5,8 @@ String easy = "EASY",hard = "HARD",impossible = "IMPOSSIBLE",moves = "MOVES",x =
 String[] movePositions = {"","Top Lft","Top Mid","Top Rgt","Mid Lft","Mid Mid","Mid Rgt","Bot Lft","Bot Mid","Bot Rgt"};
 String[] movePositionCounter = {"1.","2.","3.","4.","5.","6.","7.","8.","9."};
 Boolean[] noDraw = new Boolean[9]; //Turn off ablity to draw an X or an O in a sqaure of the boar
-Boolean check3InRowX = false, check3InRowO = false, winX = false, winO = false, toContinue = false, playWithAI = false;
+Boolean[] AIMoved = new Boolean[9];
+Boolean check3InRowX = false, check3InRowO = false, winX = false, winO = false, toContinue = false, playWithAI = false, EasyAI = false, HardAI = false, ImpossibleAI = false;
 int xScore = 0, oScore = 0, turn = 1, position, xOne,yOne,xTwo,yTwo,numberOfBoardPieces = 9,triggerPieces = 5;
 String[] trigger = new String[triggerPieces];
 String[] boardPiece = new String[numberOfBoardPieces];
@@ -38,8 +39,6 @@ void draw() {
   if(playWithAI == false){
   thingsInDraw();
 }
-  println(xScore, oScore);
-
   
 }
 
