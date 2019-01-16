@@ -105,6 +105,7 @@ void GUITID(){
     xScore = 0;
     oScore = 0;
   }  if(winX == true){
+    fill(white);
     rect(width*81/240,height*27/240,width*40/240,height*19/240);//score for x
     xScore++;
     toContinue = true;
@@ -114,6 +115,7 @@ void GUITID(){
      winX = false;
 
   }if(winO == true){
+    fill(white);
     rect(width*174/240,height*27/240,width*40/240,height*19/240);//score for O
     oScore++;
     toContinue = true;

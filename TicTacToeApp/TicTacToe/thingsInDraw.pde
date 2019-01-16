@@ -10,12 +10,13 @@
 }
 void POneTID(){
   if (turn%2 == 0) {
-   xo(x, position);
-  }
-  if (turn%2 != 0){
     if(EasyAI == true){
       EasyAITurn();
     }
+   xo(x, position);
+  }
+  else{
+    xo(x, position);
   }
   
 }
