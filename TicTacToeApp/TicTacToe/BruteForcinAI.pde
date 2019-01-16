@@ -3,13 +3,19 @@ int hP = 8;
 void BruteFocinAI(){
   for(int i = 0; i<9;i++)
   {
-    AIMoved[i] = false;
+    NotVacant[i] = false;
   }
 }
 void EasyAITurn (){
   int E = (int) random(lP,hP);
-  if(AIMoved[E] == true){
+  if(NotVacant[E] == true){
     EasyAITurn();
+  }
+  if(NotVacant[E] == false){
+    NotVacant[E] = true;
+    xo("O",(E+1));
+    noDraw[E] = true;
+    turn++;
   }
   
 }
