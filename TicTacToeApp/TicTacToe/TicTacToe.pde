@@ -43,7 +43,6 @@ void draw() {
   if(playWithAI == true){
     POneTID();
   }
-  
 }
 
 //Listener

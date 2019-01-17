@@ -181,4 +181,61 @@ void TIMCP1(){
     if(turn == 8){ moves(width*56/240,height*1743/2160,width*36/240,height*139/2160); }
     if(turn == 10){ moves(width*56/240,height*2021/2160,width*36/240,height*139/2160); }
   }
+  
+}
+void AIMoves (int place){
+  if(place == 0){//topleft
+    if(turn == 3){ moves(width*56/240,height*1048/2160,width*36/240,height*139/2160);}
+    if(turn == 5){ moves(width*56/240,height*1326/2160,width*36/240,height*139/2160);}
+    if(turn == 7){ moves(width*56/240,height*1604/2160,width*36/240,height*139/2160); }
+    if(turn == 9){ moves(width*56/240,height*1882/2160,width*36/240,height*139/2160); }
+  }
+  if(place == 1){//top middle
+    if(turn == 3){ moves(width*56/240,height*1048/2160,width*36/240,height*139/2160);}
+    if(turn == 5){ moves(width*56/240,height*1326/2160,width*36/240,height*139/2160);}
+    if(turn == 7){ moves(width*56/240,height*1604/2160,width*36/240,height*139/2160); }
+    if(turn == 9){ moves(width*56/240,height*1882/2160,width*36/240,height*139/2160); }
+  }
+  if(place == 2){//topright
+    if(turn == 3){ moves(width*56/240,height*1048/2160,width*36/240,height*139/2160);}
+    if(turn == 5){ moves(width*56/240,height*1326/2160,width*36/240,height*139/2160);}
+    if(turn == 7){ moves(width*56/240,height*1604/2160,width*36/240,height*139/2160); }
+    if(turn == 9){ moves(width*56/240,height*1882/2160,width*36/240,height*139/2160); }
+  }
+  if(place == 3){//middle right
+    if(turn == 3){ moves(width*56/240,height*1048/2160,width*36/240,height*139/2160);}
+    if(turn == 5){ moves(width*56/240,height*1326/2160,width*36/240,height*139/2160);}
+    if(turn == 7){ moves(width*56/240,height*1604/2160,width*36/240,height*139/2160); }
+    if(turn == 9){ moves(width*56/240,height*1882/2160,width*36/240,height*139/2160); }
+  }
+  if(place == 4){//middle
+    if(turn == 3){ moves(width*56/240,height*1048/2160,width*36/240,height*139/2160);}
+    if(turn == 5){ moves(width*56/240,height*1326/2160,width*36/240,height*139/2160);}
+    if(turn == 7){ moves(width*56/240,height*1604/2160,width*36/240,height*139/2160); }
+    if(turn == 9){ moves(width*56/240,height*1882/2160,width*36/240,height*139/2160); }
+  }
+  if(place == 5){//middle right
+    if(turn == 3){ moves(width*56/240,height*1048/2160,width*36/240,height*139/2160);}
+    if(turn == 5){ moves(width*56/240,height*1326/2160,width*36/240,height*139/2160);}
+    if(turn == 7){ moves(width*56/240,height*1604/2160,width*36/240,height*139/2160); }
+    if(turn == 9){ moves(width*56/240,height*1882/2160,width*36/240,height*139/2160); }
+  }
+  if(place == 6){//bottom left
+    if(turn == 3){ moves(width*56/240,height*1048/2160,width*36/240,height*139/2160);}
+    if(turn == 5){ moves(width*56/240,height*1326/2160,width*36/240,height*139/2160);}
+    if(turn == 7){ moves(width*56/240,height*1604/2160,width*36/240,height*139/2160); }
+    if(turn == 9){ moves(width*56/240,height*1882/2160,width*36/240,height*139/2160); }
+  }
+  if(place == 7){//bottom middle
+    if(turn == 3){ moves(width*56/240,height*1048/2160,width*36/240,height*139/2160);}
+    if(turn == 5){ moves(width*56/240,height*1326/2160,width*36/240,height*139/2160);}
+    if(turn == 7){ moves(width*56/240,height*1604/2160,width*36/240,height*139/2160); }
+    if(turn == 9){ moves(width*56/240,height*1882/2160,width*36/240,height*139/2160); }
+  }
+  if(place == 8){//bottom right
+    if(turn == 3){ moves(width*56/240,height*1048/2160,width*36/240,height*139/2160);}
+    if(turn == 5){ moves(width*56/240,height*1326/2160,width*36/240,height*139/2160);}
+    if(turn == 7){ moves(width*56/240,height*1604/2160,width*36/240,height*139/2160); }
+    if(turn == 9){ moves(width*56/240,height*1882/2160,width*36/240,height*139/2160); }
+  }
 }

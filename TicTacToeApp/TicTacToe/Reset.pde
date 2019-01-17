@@ -17,6 +17,12 @@ void reset(){
   
 }
 void ContinueButton() {
+  if(winX == true){
+        xScore++;
+  }
+  if(winO == true){
+        oScore++;
+  }
   turn = 1;
   for(int i = 0; i < 9; i++){
     noDraw[i] = false;

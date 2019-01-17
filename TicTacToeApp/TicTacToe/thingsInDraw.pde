@@ -13,7 +13,6 @@ void POneTID(){
     if(EasyAI == true){
       EasyAITurn();
     }
-   xo(x, position);
   }
   else{
     xo(x, position);

@@ -107,22 +107,22 @@ void GUITID(){
   }  if(winX == true){
     fill(white);
     rect(width*81/240,height*27/240,width*40/240,height*19/240);//score for x
-    xScore++;
     toContinue = true;
      for(int i = 0; i < 9; i++){
     noDraw[i] = true;
      }
-     winX = false;
-
+ 
   }if(winO == true){
     fill(white);
     rect(width*174/240,height*27/240,width*40/240,height*19/240);//score for O
-    oScore++;
     toContinue = true;
     for(int i = 0; i < 9; i++){
     noDraw[i] = true;
      }
-     winO = false;
-
+  }if(noDraw[8] == true&&noDraw[0] == true&&noDraw[1] == true&&noDraw[2] == true&&noDraw[3] == true&&noDraw[4] == true&&noDraw[5] == true&&noDraw[6] == true&&noDraw[7] == true){
+    fill(white);
+    rect(width*174/240,height*27/240,width*40/240,height*19/240);//score for O
+    rect(width*81/240,height*27/240,width*40/240,height*19/240);//score for x
+    toContinue=true;
   }
 }
