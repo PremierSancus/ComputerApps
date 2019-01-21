@@ -15,7 +15,9 @@
   }if (string.length() == quit.length()) {
      fontSize =fontSize * 0.7;
   }if(string.length() == 1){
-     fontSize = fontSize * 0.05;
+     fontSize = fontSize * 0.55;
+  }if(string.length() == "Press Continue".length()){
+     fontSize = fontSize *0.5;
   }else {
     //Catch for string less than 13 characters
     fontSize = fontSize * 0.08; //Change number as needed

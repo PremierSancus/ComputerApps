@@ -7,6 +7,8 @@ Boolean checkNestedFor(String string, String[] pieces) {
       if ( (i-j)+i < 9) 
       {
         if ( (4-j)+4 == 5 || (i-j)+i == 6 || (i-j)+i == 7 || (i-j)+i == 8 ) 
+        
+       
         {
           if (pieces[i] == string && pieces[j] == string && pieces[(i-j)+i] == string) 
           {
