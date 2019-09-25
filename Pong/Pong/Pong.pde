@@ -1,36 +1,32 @@
 //globul vuriubles
-Boolean startScreen = true;
+Boolean startScreen = true;Boolean tutorialScreen = false;Boolean ScreenIsVerticallyLong;
 color ylw = #E1FF05;
-PFont titleFont;
-String title;
-float titleWidth;
-float titleHeight;
-String footer;
-float footerY;
+PFont font1;
 
 void setup() {
   fullScreen();
+  //size(1000,500);
+  screenSizeChecker();
   textSetup();
-  if (startScreen == true) {
-    GUI ();
-    textDraw(ylw, title, titleFont, height, CENTER, CENTER, width*1/4, height*0, titleWidth, titleHeight);//left center right/ top center bottom
-    textDraw(ylw, footer, titleFont, height, CENTER, CENTER, width*1/4, footerY, titleWidth, titleHeight);
-  }
+ 
 }
 
 void draw() {
-  if (startScreen == true) {
+  if (ScreenIsVerticallyLong == false) {
+    
+  }
+  if(tutorialScreen == true){
+    tutorialScreen();
   }
 }
 
 void keyPressed() {
   if (startScreen == true) {
-    if (key == ' ') {
-      //startScreen = false;
-      exit();
+      startScreen = false;
+      tutorialScreen = true;
     }
   }
-}
+
 void keyReleased() {
 }
 

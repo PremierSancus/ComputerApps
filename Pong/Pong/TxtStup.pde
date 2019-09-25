@@ -1,11 +1,8 @@
 void textSetup(){
   
-  titleFont = createFont ( "Harrington", height);
-  title = "1234567891011121314";
-  titleWidth = width*1/2;
-  titleHeight = height*1/10;
-  footer = "Bottom";
-  footerY = (height*9/10)-1;
-  
+  font1 = createFont ( "Harrington", height);
+  if (startScreen == true) {
+      textDraw(225,"Press any key to continue", font1,height, CENTER, CENTER, displayWidth *1/4, displayHeight *1/4, displayWidth *1/2, displayWidth*1/2);
+    }
   
 }
