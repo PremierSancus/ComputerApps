@@ -1,31 +1,31 @@
 //globul vuriubles
-Boolean startScreen = true;Boolean tutorialScreen = false;Boolean ScreenIsVerticallyLong;
-color ylw = #E1FF05;
+Boolean pauseScreen = false;
+Boolean tutorialScreen = true;
+color ylw = #E1FF05,gry = #747272;
 PFont font1;
 
 void setup() {
   fullScreen();
   //size(1000,500);
+
   screenSizeChecker();
   textSetup();
- 
 }
 
 void draw() {
-  if (ScreenIsVerticallyLong == false) {
-    
-  }
-  if(tutorialScreen == true){
-    tutorialScreen();
+  if (tutorialScreen == true) {
+    background(gry);
+    textDraw(225, "Press SPACE to continue", font1, height, CENTER, CENTER, displayWidth *1/4, displayHeight *1/4, displayWidth *1/2, displayWidth*1/2);
+    // tutorialScreen();
   }
 }
 
 void keyPressed() {
-  if (startScreen == true) {
-      startScreen = false;
-      tutorialScreen = true;
-    }
+  if (tutorialScreen == true && key == ' ') {
+    tutorialScreen = false;
+    exit();
   }
+}
 
 void keyReleased() {
 }
