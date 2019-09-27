@@ -1,7 +1,6 @@
 void StartScreenGUI () {
-  //rect(displayWidth*
-}
-void GUILong () {
+ //rect(displayWidth*
+}void GUILong () {
 }
 void tutorialScreen() {
 }
