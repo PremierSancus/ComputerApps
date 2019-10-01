@@ -37,7 +37,7 @@ void setup() {
   paddleSizeX = displayWidth*1/128;
   paddleSizeY = displayHeight*6/30;
   ellipse(ballPositionX, ballPositionY, ballSize, ballSize);
-   int number = int (random (-2, 2));
+  int number = int (random (-2, 2));
   while (number == 0) {
     number = int (random (-2, 2));
   }
@@ -76,18 +76,7 @@ void draw() {
         SPDX = SPDX *(-1);
       }
     }
-    if (playerOneScore>playerTwoScore){
-      if(SPDX<0){
-        SPDX = SPDX-playerOneScore;
-        SPDY = SPDY-playerOneScore;
-      }
-    }
-    if (playerOneScore<playerTwoScore){
-      if(SPDX>0){
-        SPDX = SPDX+playerTwoScore;
-        SPDY = SPDY+playerTwoScore;//dont work
-      }
-    }
+
     ballMoveX += SPDX;
     ballMoveY += SPDY;
 
@@ -132,10 +121,14 @@ void draw() {
   stroke(1);
 
   if (pauseScreen == true) {//need quit nightmode restart tutorial
-    rect(displayWidth*1/2-displayWidth*1/6,displayHeight*1/10,displayWidth*1/3,displayHeight*2/3);
+    fill(0);
+    rect(displayWidth*1/2-displayWidth*1/6, displayHeight*1/10, displayWidth*1/3, displayHeight*2/3);
     fill(225);
-    rect(displayWidth*1/2-displayWidth*1/6+displayWidth*1/25, displayHeight*1/10+displayHeight*1/30,displayWidth*1/3-displayWidth*2/25,displayHeight*1/12);
-    rect(displayWidth*1/2-displayWidth*1/6+displayWidth*1/25, displayHeight*1/10+displayHeight*1/30,displayWidth*1/3-displayWidth*2/25,displayHeight*1/12);
+    rect(displayWidth*1/2-displayWidth*1/6+displayWidth*1/25, displayHeight*1/10+displayHeight*1/30, displayWidth*1/3-displayWidth*2/25, displayHeight*1/12);//start again
+    rect(displayWidth*1/2-displayWidth*1/6+displayWidth*1/25, displayHeight*1/10+displayHeight*4/30, displayWidth*1/3-displayWidth*2/25, displayHeight*1/12);//nightmode/lightmode  
+    rect(displayWidth*1/2-displayWidth*1/6+displayWidth*1/25, displayHeight*1/10+displayHeight*7/30, displayWidth*1/3-displayWidth*2/25, displayHeight*1/12);//tutorial
+    rect(displayWidth*1/2-displayWidth*1/6+displayWidth*1/25, displayHeight*1/10+displayHeight*10/30, displayWidth*1/3-displayWidth*2/25, displayHeight*1/12);//regularmode/specialmode
+    rect(displayWidth*1/2-displayWidth*1/6+displayWidth*1/25, displayHeight*1/10+displayHeight*13/30, displayWidth*1/3-displayWidth*2/25, displayHeight*1/12);//quit/exit
   }
 }
 
@@ -183,6 +176,25 @@ void mouseClicked() {
   if (pauseScreen == false) {
     if (mouseX >= displayWidth*1/2-displayWidth*1/128 && mouseX <= displayWidth*1/2+displayWidth*2/128 && mouseY <= displayHeight*1/32+displayHeight*1/200) {
       pauseScreen = true;
+    }
+  }
+  if (pauseScreen == true) {
+    rect(displayWidth*1/2-displayWidth*1/6+displayWidth*1/25, displayHeight*1/10+displayHeight*1/30, displayWidth*1/3-displayWidth*2/25, displayHeight*1/12);//start again
+    rect(displayWidth*1/2-displayWidth*1/6+displayWidth*1/25, displayHeight*1/10+displayHeight*4/30, displayWidth*1/3-displayWidth*2/25, displayHeight*1/12);//nightmode/lightmode  
+    rect(displayWidth*1/2-displayWidth*1/6+displayWidth*1/25, displayHeight*1/10+displayHeight*7/30, displayWidth*1/3-displayWidth*2/25, displayHeight*1/12);//tutorial
+    rect(displayWidth*1/2-displayWidth*1/6+displayWidth*1/25, displayHeight*1/10+displayHeight*10/30, displayWidth*1/3-displayWidth*2/25, displayHeight*1/12);//regularmode/specialmode
+    rect(displayWidth*1/2-displayWidth*1/6+displayWidth*1/25, displayHeight*1/10+displayHeight*13/30, displayWidth*1/3-displayWidth*2/25, displayHeight*1/12);//quit/exit
+    if (mouseX>=displayWidth*1/2-displayWidth*1/6+displayWidth*1/25 && mouseX<=displayWidth*1/2-displayWidth*1/6+displayWidth*1/25+(displayWidth*1/3-displayWidth*2/25)) {
+      if (mouseY>=displayHeight*1/10+displayHeight*1/30 && mouseY<=displayHeight*1/10+displayHeight*1/30+(displayHeight*1/12)) {//startagain
+      }
+      if (mouseY>=displayHeight*1/10+displayHeight*4/30 && mouseY<=displayHeight*1/10+displayHeight*1/30+(displayHeight*1/12)) {//nightmode/lightmode
+      }
+      if (mouseY>=displayHeight*1/10+displayHeight*7/30 && mouseY<=displayHeight*1/10+displayHeight*1/30+(displayHeight*1/12)) {//tutorial
+      }
+      if (mouseY>=displayHeight*1/10+displayHeight*10/30 && mouseY<=displayHeight*1/10+displayHeight*1/30+(displayHeight*1/12)) {//reguarmode/speshulmode
+      }
+      if (mouseY>=displayHeight*1/10+displayHeight*13/30 && mouseY<=displayHeight*1/10+displayHeight*1/30+(displayHeight*1/12)) {//quit/exit
+      }
     }
   }
 }
