@@ -12,6 +12,8 @@ void nightmode() {
     }
     rect(displayWidth*1/2-displayWidth*1/128, displayHeight*1/200, displayWidth*1/128, displayHeight*1/32);
     rect(displayWidth*1/2+displayWidth*1/128, displayHeight*1/200, displayWidth*1/128, displayHeight*1/32);
+    textDraw(black, ""+playerOneScore, font2, displayHeight, CENTER, CENTER, displayWidth*1/4-1/8, 0, displayWidth*1/4, displayHeight*1/6);
+    textDraw(black, ""+playerTwoScore, font2, displayHeight, CENTER, CENTER, displayWidth*2/4+1/8, 0, displayWidth*1/4, displayHeight*1/6);
     stroke(1);
   }
   if (nightMode == true) {
@@ -21,12 +23,14 @@ void nightmode() {
     rect((displayWidth*63/64)-paddleSizeX, displayHeight*YP2/30, paddleSizeX, paddleSizeY);
     fill(green);
     ellipse(ballMoveX, ballMoveY, ballSize, ballSize);
-    fill(white);
+    fill(black);
     if (mouseX >= displayWidth*1/2-displayWidth*1/128 && mouseX <= displayWidth*1/2+displayWidth*2/128 && mouseY <= displayHeight*1/32+displayHeight*1/200) {
       fill(grey);
     }
     rect(displayWidth*1/2-displayWidth*1/128, displayHeight*1/200, displayWidth*1/128, displayHeight*1/32);
     rect(displayWidth*1/2+displayWidth*1/128, displayHeight*1/200, displayWidth*1/128, displayHeight*1/32);
+    textDraw(black, ""+playerOneScore, font2, displayHeight, CENTER, CENTER, displayWidth*1/4-1/8, 0, displayWidth*1/4, displayHeight*1/6);
+    textDraw(black, ""+playerTwoScore, font2, displayHeight, CENTER, CENTER, displayWidth*2/4+1/8, 0, displayWidth*1/4, displayHeight*1/6);
     stroke(1);
   }
 }

@@ -4,7 +4,7 @@ Boolean pauseScreen = false;
 Boolean tutorialScreen = false;
 String exit = "Exit", lightmode, unpause = "Unpause", restart = "Restart", tutorial = "tutorial";
 color yellow = #E1FF05, grey = #747272, red = #ED0707, blue = #0727ED, green = #07ED20, black, white;
-PFont font1;
+PFont font1, font2;
 float ballSize;
 float ballPositionY;
 float ballPositionX;
@@ -124,6 +124,9 @@ void draw() {
   }
   nightmode();
   pause();
+  if (tutorialScreen == true){
+    tutorial();
+  }
 }
 
 void keyPressed() {
@@ -177,19 +180,25 @@ void mouseClicked() {
       if (mouseY>=displayHeight*1/10+displayHeight*1/30 && mouseY<=displayHeight*1/10+displayHeight*1/30+(displayHeight*1/12)) {//unpause
         pauseScreen = false;
       }
-      if (mouseY>=displayHeight*1/10+displayHeight*4/30 && mouseY<=displayHeight*1/10+displayHeight*1/30+(displayHeight*1/12)) {//nightmode/lightmode
-        if (nightMode == false) {
+      if (tutorialScreen == false) {
+        if (mouseY>=displayHeight*1/10+displayHeight*7/30 && mouseY<=displayHeight*1/10+displayHeight*7/30+(displayHeight*1/12)) {//tutorial
+          tutorialScreen = true;
+        }
+      }
+      if (mouseY>=displayHeight*1/10+displayHeight*10/30 && mouseY<=displayHeight*1/10+displayHeight*10/30+(displayHeight*1/12)) {//restart
+        restart();
+      }
+      if (mouseY>=displayHeight*1/10+displayHeight*13/30 && mouseY<=displayHeight*1/10+displayHeight*13/30+(displayHeight*1/12)) {//quit/exit
+        exit();
+      }  
+      if (nightMode == false) {
+        if (mouseY>=displayHeight*1/10+displayHeight*4/30 && mouseY<=displayHeight*1/10+displayHeight*4/30+(displayHeight*1/12)) {//nightmode/lightmode
           nightMode = true;
         }
-        if (nightMode == true) {
+      } else {
+        if (mouseY>=displayHeight*1/10+displayHeight*4/30 && mouseY<=displayHeight*1/10+displayHeight*4/30+(displayHeight*1/12)) {//nightmode/lightmode
           nightMode = false;
         }
-      }
-      if (mouseY>=displayHeight*1/10+displayHeight*7/30 && mouseY<=displayHeight*1/10+displayHeight*1/30+(displayHeight*1/12)) {//tutorial
-      }
-      if (mouseY>=displayHeight*1/10+displayHeight*10/30 && mouseY<=displayHeight*1/10+displayHeight*1/30+(displayHeight*1/12)) {//restart
-      }
-      if (mouseY>=displayHeight*1/10+displayHeight*13/30 && mouseY<=displayHeight*1/10+displayHeight*1/30+(displayHeight*1/12)) {//quit/exit
       }
     }
   }
