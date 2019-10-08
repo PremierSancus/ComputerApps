@@ -29,7 +29,7 @@ void pause() {
     rect(MButtonX, displayHeight*1/10+displayHeight*13/30, MButtonXS, MButtonYS);//quit/exit
     textDraw(black, unpause, font1, displayHeight, CENTER, CENTER, MButtonX, displayHeight*1/10+displayHeight*1/30, MButtonXS, MButtonYS);
     textDraw(black, lightmode, font1, displayHeight, CENTER, CENTER, MButtonX, displayHeight*1/10+displayHeight*4/30, MButtonXS, MButtonYS);
-    textDraw(black, tutorial, font1, displayHeight, CENTER, CENTER, MButtonX, displayHeight*1/10+displayHeight*7/30, MButtonXS, MButtonYS);
+    textDraw(black, casual, font1, displayHeight, CENTER, CENTER, MButtonX, displayHeight*1/10+displayHeight*7/30, MButtonXS, MButtonYS);
     textDraw(black, restart, font1, displayHeight, CENTER, CENTER, MButtonX, displayHeight*1/10+displayHeight*10/30, MButtonXS, MButtonYS);
     textDraw(black, exit, font1, displayHeight, CENTER, CENTER, MButtonX, displayHeight*1/10+displayHeight*13/30, MButtonXS, MButtonYS);
   }
