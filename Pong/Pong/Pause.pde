@@ -12,9 +12,9 @@ void pause() {
       fill(grey);
     }
     rect(MButtonX, displayHeight*1/10+displayHeight*4/30, MButtonXS, MButtonYS);//nightmode/lightmode  
-    fill(white);
+    fill(red);
     if (mouseX>=MButtonX && mouseX<=MButtonX+MButtonXS && mouseY>= displayHeight*1/10+displayHeight*7/30 && mouseY<=displayHeight*1/10+displayHeight*7/30+MButtonYS) {
-      fill(grey);
+      fill(red);
     }
     rect(MButtonX, displayHeight*1/10+displayHeight*7/30, MButtonXS, MButtonYS);//tutorial
     fill(white);

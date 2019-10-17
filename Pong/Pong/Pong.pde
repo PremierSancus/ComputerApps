@@ -58,12 +58,12 @@ void setup() {
   while (number == 0) {
     number = int (random (-2, 2));
   }
-  SPDX = 5*number;
+  SPDX = 2*number;
   number = int (random (-2, 2));
   while (number == 0) {
     number = int (random (-2, 2));
   }
-  SPDY = 7.5*number;
+  SPDY = 2.5*number;
 }
 
 void draw() {
@@ -89,23 +89,30 @@ void draw() {
         ballMoveX = int(ballPositionX);
         ballMoveY = int(ballPositionY);
         playerTwoScore += 1;
+        SPDX = SPDX * -0.8;
+        SPDY = SPDY * -0.8;
       }
       if (ballMoveX >= displayWidth-ballSize/2) {//ball into right net
         ballMoveX = int(ballPositionX);
         ballMoveY = int(ballPositionY);
         playerOneScore += 1;
+        SPDX = SPDX * -0.8;
+        SPDY = SPDY * -0.8;
       }
       if (ballMoveY <= ballSize/2 || ballMoveY >= displayHeight-ballSize/2) {//deflect from top to bottom
         SPDY = SPDY*(-1);
+        
       }
       if (ballMoveX <= (displayWidth*1/64)+ paddleSizeX + ballSize/2 && ballMoveX >= displayWidth*1/64) {
         if (ballMoveY >= displayHeight*YP1/30 && ballMoveY <= displayHeight*(YP1/30)+paddleSizeY) {//Paddle deflection1
-          SPDX = SPDX *(-1);
+          SPDX = SPDX *(-1.1);
+          SPDY = SPDY *(1.1);
         }
       }
       if (ballMoveX >= (displayWidth*63/64) - paddleSizeX && ballMoveX <= displayWidth*63/64) {
         if (ballMoveY >= displayHeight*YP2/30 && ballMoveY <= displayHeight*(YP2/30)+paddleSizeY) {//Paddle deflection2
           SPDX = SPDX *(-1);
+          SPDY = SPDY *(1.1);
         }
       }
 
@@ -205,15 +212,7 @@ void mouseClicked() {
           nightMode = false;
         }
       }
-      if (casualMode == true) {
-        if (mouseY>=displayHeight*1/10+displayHeight*7/30 && mouseY<=displayHeight*1/10+displayHeight*7/30+(displayHeight*1/12)) {//casual
-          casualMode = false;
-        }
-      } else {
-        if (mouseY>=displayHeight*1/10+displayHeight*7/30 && mouseY<=displayHeight*1/10+displayHeight*7/30+(displayHeight*1/12)) {//casual
-          casualMode = true;
-        }
-      }
+      
     }
   }
 }
