@@ -1,18 +1,24 @@
-//globul variables
+
+Ball ball = new Ball(300, 250, 25);
 
 void setup() {
-  size(600, 500);//
-  //screenSizeTester();
-}//end setup
-void draw () {
-  background(0);//greyscale black is less mem
-  fill(255);//white greyscale
-  noStroke();//remove teh outline of teh ball
-  ellipse(ball.x, ball.y, ball.diameter, ball.diameter);//
-  stroke(1);//reset noStroke to defaultl parameter
-  fill(0);//reset to default black
-}//end draw
-void mousePressed () {
-}//end mousePressed
-void keyPressed () {
-}//end keyPressed
+  size(1600, 1000); //Teaching Canvas, all students will use size, not fullScreen()
+  screenSizeTester();
+  //ellipseMode(CENTER); // Default mode so a reminder that ball is drawn from centre
+} // End setup()
+
+void draw() {
+  background(0); //Black, greyscale (less memory than color variable)
+  ball.stepGently();
+  drawBall(255, ball.getX(), ball.y, ball.diameter);
+} // End draw()
+
+void mousePressed() {
+  ball.targetX = mouseX;
+  ball.targetY = mouseY;
+  ball.prevX = ball.getX();
+  ball.prevY = ball.y;
+} // End mousePressed()
+
+void keyPressed() {
+} // End keyPressed()
