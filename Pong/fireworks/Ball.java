@@ -13,8 +13,6 @@ class Ball {
     this.y = yParameter; 
     this.diameter = diameterParameter;
 
-    targetX = xParameter;
-    targetY = yParameter;
   } // End of Constructor
   void stepGently() {
     if (x<targetX) {
