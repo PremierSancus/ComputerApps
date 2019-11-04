@@ -32,7 +32,7 @@ public void draw() {
       rect(stars[i].getX(), stars[i].getY(), stars[i].getRadius(), stars[i].getRadius());
     }
     count++;
-    if (count == 60) {
+    if (count == 120) {
       createStars();
       count = 1;     
       blackholeMode = false;
