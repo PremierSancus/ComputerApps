@@ -1,14 +1,11 @@
 class Firewok {
   //object variables
-  float x;
-  float y;
-  color colour;
-  float diameter;
-  float xSpeed;
-  float ySpeed;
-  float xnet = 0;
-  float ynet = 0;
-  float count= 0;
+  private float x;
+  private float y;
+  private float diameter;
+  private float xSpeed;
+  private float ySpeed;
+  private float count= 0;
   //constructor - populates single object variables
   Firewok (float X, float Y, float xSpeed, float ySpeed, float diameter) {
     this.x = X;
@@ -16,30 +13,33 @@ class Firewok {
     this.diameter = diameter;
     this.xSpeed = xSpeed;
     this.ySpeed = ySpeed;
-    this.colour = color(int(random(50, 256)), int(random(50, 256)), int(random(50, 256)));
   }
   //edge detection
   void edgeDetection() {
+    count++;
     if (x+diameter/2 >= displayWidth || x-diameter/2 <= 0) {
       xSpeed = xSpeed *-1;
     }
-    if (y+diameter/2 >= displayHeight ) {
-      ySpeed = ySpeed *-1;
+    if (y >= displayHeight) {
+      y=0;
+      ySpeed = random(5, 30);
     }
   }
   //Ball movement
   void move() {
     x = x+xSpeed;
+    count ++;
     y = y+ySpeed;
-    if (ySpeed < 1) {
+    if (count == 5) {
       ySpeed = ySpeed +1;
+      count = 0;
     }
   }
 
   //Draw
   void classDraw() {
-    fill(colour);
-    rect(x, y, diameter, diameter);
+    fill(255);
+    ellipse(x, y, diameter, diameter);
   }
   // Getters and Setters
 }

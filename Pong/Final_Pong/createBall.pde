@@ -1,8 +1,8 @@
 void createBall() {
-  for (int i = 0; i < firewok.length; i++) {
+  for (int i = 0; i < balls.length; i++) {
     float xLocation = mouseX;//random(width);
     float yLocation = mouseY;//random(height);
-    float xSpeed = random(-10,10);
+    float xSpeed = random(-3,3);
     float ySpeed = random(-32,5);
     float diameter = random(20,40);
     if (xLocation >= width-25) {
@@ -17,6 +17,6 @@ void createBall() {
     if (yLocation <= 25) {
       yLocation = 25/2;
     }    
-    firewok[i] = new Firewok(xLocation, yLocation,xSpeed,ySpeed,diameter );
+    balls[i] = new Ball(xLocation, yLocation,xSpeed,ySpeed,diameter );
   }
 }

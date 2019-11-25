@@ -1,22 +1,22 @@
 //explodin FIreworks program
 //Globul Objects
-Firewok[] firewok = new Firewok[80];
+Ball[] balls = new Ball[80];
 //Globul variobles
 
 void setup() {
   //size(1600,800);
   fullScreen();
-  //ScreenSizeTester();
+  screenSizeTester();
   createBall();
 }//end of setup
 
 void draw() {
   background(0);
   //remember dank mode
-  for (int i = 0; i<firewok.length; i++) {
-    firewok[i].edgeDetection();
-    firewok[i].move();
-    firewok[i].classDraw();
+  for (int i = 0; i<balls.length; i++) {
+    //balls[i].edgeDetection();
+    //balls[i].move();
+    balls[i].classDraw();
   }
   
 }//end of draw

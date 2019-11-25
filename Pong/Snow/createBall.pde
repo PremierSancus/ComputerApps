@@ -1,10 +1,10 @@
 void createBall() {
   for (int i = 0; i < firewok.length; i++) {
-    float xLocation = mouseX;//random(width);
-    float yLocation = mouseY;//random(height);
+    float xLocation = random(0,displayWidth);//random(width);
+    float yLocation = 0;//random(height);
     float xSpeed = random(-10,10);
-    float ySpeed = random(-32,5);
-    float diameter = random(20,40);
+    float ySpeed = random(-30,5);
+    float diameter = random(5,25);
     if (xLocation >= width-25) {
       xLocation = width-25/2;
     }

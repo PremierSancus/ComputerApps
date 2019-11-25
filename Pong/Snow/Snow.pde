@@ -1,8 +1,7 @@
 //explodin FIreworks program
 //Globul Objects
-Firewok[] firewok = new Firewok[80];
+Firewok[] firewok = new Firewok[200];
 //Globul variobles
-
 void setup() {
   //size(1600,800);
   fullScreen();
@@ -18,10 +17,7 @@ void draw() {
     firewok[i].move();
     firewok[i].classDraw();
   }
-  
 }//end of draw
 
 void mousePressed() {
-    createBall();
-
 }//end of mousepressed
